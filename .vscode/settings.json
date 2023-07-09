@@ -1,0 +1,49 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  // formatter
+  "editor.formatOnSave": true, // ファイル保存時の自動フォーマット有効
+  "editor.formatOnPaste": true, // ペーストした文字の自動フォーマット有効
+  "editor.formatOnType": true, // 文字入力行の自動フォーマット有効
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // デフォルトフォーマッターをPrettierに指定
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true // ファイル保存時に ESLint でフォーマット
+  },
+  "editor.lineNumbers": "on",
+  "editor.rulers": [100],
+  "editor.wordWrap": "on",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "npm.packageManager": "yarn",
+  "cSpell.words": [
+    "Gonzaemon",
+    "gtag",
+    "inversify",
+    "qiita",
+    "contentful",
+    "microcms",
+    "tailwindcss",
+    "markuplint",
+    "zenn",
+    "headlessui",
+    "heroicons",
+    "nextjs",
+    "pino",
+    "logflare",
+    "tocbot",
+    "codegen",
+    "clsx",
+    "vercelignore",
+    "nestjs"
+  ],
+  "scss.lint.unknownAtRules": "ignore",
+  "css.lint.unknownAtRules": "ignore",
+  "tailwindCSS.experimental.classRegex": [
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ]
+}
