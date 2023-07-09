@@ -1,17 +1,18 @@
 {
-    "name": "manage",
-    "version": "1.0.0",
-    "license": "UNLICENSED",
-    "private": true,
-    "workspaces": [
-      "packages/*"
-    ],
-    "scripts": {
-      "start:fe": "yarn workspace frontend start",
-      "start:api": "yarn workspace api start",
-      "dev:fe": "yarn workspace frontend dev",
-      "dev:api": "yarn workspace api dev",
-      "test:fe": "yarn workspace frontend test",
-      "test:api": "yarn workspace api test:cov"
-    }
+  "name": "manage",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start:fe": "yarn workspace frontend start",
+    "start:api": "yarn workspace api start",
+    "dev:fe": "yarn workspace frontend dev",
+    "dev:api": "yarn workspace api dev",
+    "test:fe": "yarn workspace frontend test",
+    "test:api": "yarn workspace api test:cov",
+    "storybook": "yarn workspace frontend storybook"
   }
+}
