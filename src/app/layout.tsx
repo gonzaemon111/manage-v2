@@ -2,9 +2,6 @@
 import "./globals.css";
 import { DefaultLayout } from "@/components/templates/DefaultLayout";
 import { SessionProvider } from "next-auth/react";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -13,7 +10,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className={inter.className + " h-screen w-screen"}>
+      <body className={"h-screen w-screen"}>
         <SessionProvider>
           <DefaultLayout>{children}</DefaultLayout>
         </SessionProvider>
