@@ -2,7 +2,7 @@
 import { ReactNode, useState } from "react";
 import { Header } from "../organisms/Header";
 import { Sidebar } from "../organisms/Sidebar";
-import { SessionProvider, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 interface Props {
   children: ReactNode;
@@ -11,9 +11,11 @@ interface Props {
 export function DefaultLayout({ children }: Props) {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const { data: session } = useSession();
+  console.log("ClientSession");
+  console.log(session);
 
   return (
-    <SessionProvider>
+    <>
       <Header
         sidebarOpen={sidebarOpen}
         handleSidebarOpen={() => setSidebarOpen(!sidebarOpen)}
@@ -24,6 +26,6 @@ export function DefaultLayout({ children }: Props) {
           {children}
         </main>
       </div>
-    </SessionProvider>
+    </>
   );
 }

@@ -19,7 +19,9 @@ export function TopPage() {
         <h1 className="text-2xl">タスク</h1>
       </Panel>
       <Container>
-        <TaskTable tasks={tasks} />
+        <Panel>
+          <TaskTable tasks={tasks} />
+        </Panel>
       </Container>
     </>
   );

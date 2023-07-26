@@ -14,7 +14,7 @@ export function Sidebar({ sidebarOpen = true }: Props) {
       <div className="flex flex-col justify-between flex-1">
         <nav className="-mx-3 space-y-6 ">
           <div className="space-y-3 ">
-            <label className="px-3 text-slate-100 uppercase dark:text-slate-400">
+            <label className="px-3 text-slate-100 uppercase">
               プライベート
             </label>
 
@@ -26,14 +26,14 @@ export function Sidebar({ sidebarOpen = true }: Props) {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth="1.5"
+                strokeWidth={1.5}
                 stroke="currentColor"
                 className="w-5 h-5"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
+                  d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
                 />
               </svg>
 
@@ -42,9 +42,7 @@ export function Sidebar({ sidebarOpen = true }: Props) {
           </div>
 
           <div className="space-y-3 ">
-            <label className="px-3 text-slate-100 uppercase dark:text-slate-400">
-              在庫管理
-            </label>
+            <label className="px-3 text-slate-100 uppercase">在庫管理</label>
 
             <Link
               className="flex items-center px-3 py-2 text-slate-400 transition-colors duration-300 transform hover:border-r-4 hover:text-slate-200 hover:bg-slate-500"
@@ -70,7 +68,7 @@ export function Sidebar({ sidebarOpen = true }: Props) {
 
             <Link
               className="flex items-center px-3 py-2 text-slate-400 transition-colors duration-300 transform hover:border-r-4 hover:text-slate-200 hover:bg-slate-500"
-              href="#"
+              href="/domains"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -83,18 +81,16 @@ export function Sidebar({ sidebarOpen = true }: Props) {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3"
+                  d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
                 />
               </svg>
 
-              <span className="mx-2 text-sm font-medium">Hotspots</span>
+              <span className="mx-2 text-sm font-medium">ドメイン</span>
             </Link>
           </div>
 
           <div className="space-y-3">
-            <label className="px-3 text-slate-100 uppercase dark:text-slate-400">
-              設定
-            </label>
+            <label className="px-3 text-slate-100 uppercase">設定</label>
 
             <Link
               className="flex items-center px-3 py-2 text-slate-400 transition-colors duration-300 transform hover:border-r-4 hover:text-slate-200 hover:bg-slate-500"

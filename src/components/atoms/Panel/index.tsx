@@ -6,7 +6,7 @@ interface Props {
 
 export function Panel({ children }: Props) {
   return (
-    <div className="p-8 bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-50">
+    <div className="p-8 bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-50 shadow">
       {children}
     </div>
   );

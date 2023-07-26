@@ -1,4 +1,5 @@
 import { Link } from "@/components/atoms/Link";
+import { Table, Tbody, Td, Th, Thead, Tr } from "@/components/molecules/Table";
 
 interface Task {
   readonly id: number;
@@ -15,51 +16,44 @@ interface Props {
 
 export function TaskTable({ tasks }: Props) {
   return (
-    <div className="relative overflow-x-auto shadow-md">
-      <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 border border-slate-800">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-          <tr>
-            <th scope="col" className="px-6 py-3"></th>
-            <th scope="col" className="px-6 py-3">
-              タスク名
-            </th>
-            <th scope="col" className="px-6 py-3">
-              終了日時
-            </th>
-            <th scope="col" className="px-6 py-3">
-              更新日時
-            </th>
-            <th scope="col" className="px-6 py-3"></th>
-          </tr>
-        </thead>
-        <tbody>
-          {tasks.map((task) => {
-            return (
-              <tr
-                className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
-                key={task.id}
+    <Table>
+      <Thead>
+        <Tr>
+          <Th scope="col" className="px-6 py-3"></Th>
+          <Th scope="col" className="px-6 py-3">
+            タスク名
+          </Th>
+          <Th scope="col" className="px-6 py-3">
+            終了日時
+          </Th>
+          <Th scope="col" className="px-6 py-3">
+            更新日時
+          </Th>
+          <Th scope="col" className="px-6 py-3"></Th>
+        </Tr>
+      </Thead>
+      <Tbody>
+        {tasks.map((task) => {
+          return (
+            <Tr className="bg-white dark:bg-gray-900" key={task.id}>
+              <Th
+                scope="row"
+                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
               >
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  {task.finishedAt !== undefined ? "✅" : null}
-                </th>
-                <td className="px-6 py-4">
-                  <Link href={`/tasks/${task.id}`}>{task.name}</Link>
-                </td>
-                <td className="px-6 py-4">
-                  {task.finishedAt !== undefined ? task.finishedAt : null}
-                </td>
-                <td className="px-6 py-4">{task.updatedAt}</td>
-                <td className="px-6 py-4">
-                  <Link href={`/tasks/${task.id}/edit`}>編集</Link>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
+                {task.finishedAt !== undefined ? "✅" : null}
+              </Th>
+              <Td>
+                <Link href={`/tasks/${task.id}`}>{task.name}</Link>
+              </Td>
+              <Td>{task.finishedAt !== undefined ? task.finishedAt : null}</Td>
+              <Td>{task.updatedAt}</Td>
+              <Td>
+                <Link href={`/tasks/${task.id}/edit`}>編集</Link>
+              </Td>
+            </Tr>
+          );
+        })}
+      </Tbody>
+    </Table>
   );
 }
