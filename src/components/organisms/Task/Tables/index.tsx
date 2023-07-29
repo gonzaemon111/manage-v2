@@ -4,9 +4,8 @@ import { Table, Tbody, Td, Th, Thead, Tr } from "@/components/molecules/Table";
 interface Task {
   readonly id: number;
   readonly name: string;
-  readonly createdAt: number;
-  readonly updatedAt: number;
-  readonly finishedAt?: number;
+  readonly finishedAt: string;
+  readonly deadline: string;
   readonly memo?: string;
 }
 
@@ -27,7 +26,7 @@ export function TaskTable({ tasks }: Props) {
             終了日時
           </Th>
           <Th scope="col" className="px-6 py-3">
-            更新日時
+            締切日時
           </Th>
           <Th scope="col" className="px-6 py-3"></Th>
         </Tr>
@@ -46,7 +45,7 @@ export function TaskTable({ tasks }: Props) {
                 <Link href={`/tasks/${task.id}`}>{task.name}</Link>
               </Td>
               <Td>{task.finishedAt !== undefined ? task.finishedAt : null}</Td>
-              <Td>{task.updatedAt}</Td>
+              <Td>{task.deadline}</Td>
               <Td>
                 <Link href={`/tasks/${task.id}/edit`}>編集</Link>
               </Td>

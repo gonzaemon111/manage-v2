@@ -8,7 +8,7 @@ interface Props {
 
 export function Header({ sidebarOpen = true, handleSidebarOpen }: Props) {
   return (
-    <nav className="bg-emerald-400 dark:bg-emerald-700 shadow-lg text-slate-100">
+    <nav className="bg-primary shadow-lg text-slate-100">
       <div className="px-8 mx-auto max-w-7xl">
         <div className="flex items-center justify-between h-[64px]">
           <div className=" flex items-center">
