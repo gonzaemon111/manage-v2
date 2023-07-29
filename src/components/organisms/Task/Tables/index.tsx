@@ -4,8 +4,8 @@ import { Table, Tbody, Td, Th, Thead, Tr } from "@/components/molecules/Table";
 interface Task {
   readonly id: number;
   readonly name: string;
-  readonly finishedAt: string;
-  readonly deadline: string;
+  readonly finishedAt?: string;
+  readonly deadline?: string;
   readonly memo?: string;
 }
 

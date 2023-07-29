@@ -3,14 +3,12 @@ import { getServerSession } from "next-auth/next";
 import { authOptions } from "../api/auth/[...nextauth]/authOption";
 import { container } from "@/server/di.config";
 import { TYPES } from "@/server/di.types";
-import { TaskController } from "@/server/di.interface";
+import { Task, TaskController } from "@/server/di.interface";
 
 const controller = container.get<TaskController>(TYPES.TaskController);
 
 async function fetchTasks(): Promise<{ tasks: ReadonlyArray<Task> }> {
-  const list = await controller.getList();
-  console.log(list);
-  return list;
+  return await controller.getList();
 }
 
 export const metadata = {

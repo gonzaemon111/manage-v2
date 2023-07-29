@@ -6,9 +6,8 @@ const tasks = [
   {
     id: 1,
     name: "Alexに寝室の明かりを連携させる",
-    createdAt: new Date().getTime(),
-    updatedAt: new Date().getTime(),
-    finishedAt: new Date().getTime(),
+    memo: "",
+    deadline: "",
   },
 ];
 
