@@ -1,6 +1,6 @@
 import { TYPES } from "@/server/di.types";
 import { TaskRepository } from "@/server/domain/Task";
-import { inject } from "inversify";
+import { inject, injectable } from "inversify";
 import { TaskClient } from "../lib";
 import { UserRepositoryImpl } from "./UserRepositoryImpl";
 
@@ -8,6 +8,7 @@ interface GetParams {
   readonly id: number;
 }
 
+@injectable()
 export class TaskRepositoryImpl implements TaskRepository {
   constructor(
     @inject(TYPES.TaskClient)

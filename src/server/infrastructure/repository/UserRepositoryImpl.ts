@@ -1,10 +1,11 @@
 import { TYPES } from "@/server/di.types";
-import { User, UserRepository } from "@/server/domain/User";
-import { inject } from "inversify";
+import { UserRepository } from "@/server/domain/User";
+import { inject, injectable } from "inversify";
 import { UserClient } from "../lib";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/authOption";
 
+@injectable()
 export class UserRepositoryImpl implements UserRepository {
   constructor(
     @inject(TYPES.UserClient)

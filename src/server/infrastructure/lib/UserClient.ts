@@ -16,10 +16,11 @@ interface TokenResponse {
 @injectable()
 export class UserClient {
   private readonly client: AxiosInstance;
+  private readonly url = process.env.LAGRING_BASE_URL;
 
   constructor() {
     this.client = axios.create({
-      baseURL: `${process.env.LAGRING_BASE_URL}/api/users`,
+      baseURL: `${this.url}/api/users`,
       headers: { "Content-Type": "application/json" },
       responseType: "json",
     });
@@ -27,9 +28,9 @@ export class UserClient {
 
   public async findOrCreateUser(params: FindOrCreateUserParams) {
     if (
-      typeof params.email === "string" ||
-      typeof params.name === "string" ||
-      typeof params.provider === "string"
+      typeof params.email !== "string" ||
+      typeof params.name !== "string" ||
+      typeof params.provider !== "string"
     ) {
       return new Failure(new Error("パラメータが不正です"));
     }

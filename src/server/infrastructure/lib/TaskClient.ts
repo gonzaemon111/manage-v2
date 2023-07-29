@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import { Failure, Success } from "@/server/shared/Result";
 import axios, { AxiosInstance } from "axios";
 import { injectable } from "inversify";
@@ -17,10 +18,11 @@ interface GetTasksResponse {
 @injectable()
 export class TaskClient {
   private readonly client: AxiosInstance;
+  private readonly url = process.env.LAGRING_BASE_URL;
 
   constructor() {
     this.client = axios.create({
-      baseURL: `${process.env.LAGRING_BASE_URL}/api/tasks`,
+      baseURL: `${this.url}/api/tasks`,
       headers: { "Content-Type": "application/json" },
       responseType: "json",
     });
