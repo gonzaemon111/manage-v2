@@ -5,11 +5,13 @@ import {
   UserRepository,
   TaskRepository,
   TaskService,
+  TaskServiceImpl,
+  TaskController,
+  TaskControllerImpl,
 } from "./di.interface";
 import { TYPES } from "./di.types";
 import { UserRepositoryImpl } from "./infrastructure/repository/UserRepositoryImpl";
 import { TaskRepositoryImpl } from "./infrastructure/repository/TaskRepositoryImpl";
-import { TaskController } from "./interface/controller";
 
 /**
  * DIコンテナを作成
@@ -34,11 +36,11 @@ container.bind<TaskRepository>(TYPES.TaskRepository).to(TaskRepositoryImpl);
 /**
  * Service
  */
-container.bind<TaskService>(TYPES.TaskService).to(TaskService);
+container.bind<TaskService>(TYPES.TaskService).to(TaskServiceImpl);
 
 /**
  * Controller
  */
-container.bind<TaskController>(TYPES.TaskController).to(TaskController);
+container.bind<TaskController>(TYPES.TaskController).to(TaskControllerImpl);
 
 export { container };

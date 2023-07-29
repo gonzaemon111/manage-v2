@@ -1,10 +1,11 @@
 import "reflect-metadata";
-import { TaskService } from "@/server/di.interface";
+import { type TaskService } from "@/server/di.interface";
 import { TYPES } from "@/server/di.types";
 import { inject, injectable } from "inversify";
+import { TaskController } from "./interface";
 
 @injectable()
-export class TaskController {
+export class TaskControllerImpl implements TaskController {
   constructor(
     @inject(TYPES.TaskService) private readonly service: TaskService
   ) {}
