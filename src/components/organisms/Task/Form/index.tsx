@@ -1,3 +1,9 @@
+import { Panel } from "@/components/atoms/Panel";
+
 export function TaskForm() {
-  return <></>;
+  return (
+    <Panel>
+      <div></div>
+    </Panel>
+  );
 }
