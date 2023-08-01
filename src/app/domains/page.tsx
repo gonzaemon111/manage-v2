@@ -32,6 +32,10 @@ async function fetchDomains(): Promise<{ domains: ReadonlyArray<Domain> }> {
 
 export const metadata = {
   title: "ドメイン一覧 - Manage",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default async function Page() {

@@ -13,6 +13,10 @@ async function fetchTasks(): Promise<{ tasks: ReadonlyArray<Task> }> {
 
 export const metadata = {
   title: "タスク一覧 - Manage",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default async function Page() {
