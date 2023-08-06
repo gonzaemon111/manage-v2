@@ -1,0 +1,308 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DomainTable コンポーネント スナップショットテスト Renders Default story 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="relative overflow-x-auto shadow-md"
+      >
+        <table
+          class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border border-slate-300 dark:border-slate-600"
+        >
+          <thead
+            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+          >
+            <tr>
+              <th
+                class="px-6 py-3"
+                scope="col"
+              />
+              <th
+                class="px-6 py-3"
+                scope="col"
+              >
+                タスク名
+              </th>
+              <th
+                class="px-6 py-3"
+                scope="col"
+              >
+                アカウント名
+              </th>
+              <th
+                class="px-6 py-3"
+                scope="col"
+              >
+                終了日時
+              </th>
+              <th
+                class="px-6 py-3"
+                scope="col"
+              />
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              class="bg-white dark:bg-gray-900"
+            >
+              <th
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                scope="row"
+              >
+                ✅
+              </th>
+              <td
+                class="px-6 py-4"
+              >
+                <a
+                  class="text-sky-500 transition-colors duration-200 transform hover:text-sky-600 dark:hover:text-sky-300 hover:underline undefined"
+                  href="/tasks/1"
+                >
+                  sample.app
+                </a>
+              </td>
+              <td
+                class="px-6 py-4"
+              >
+                sample
+              </td>
+              <td
+                class="px-6 py-4"
+              >
+                2023/08/01
+              </td>
+              <td
+                class="px-6 py-4"
+              >
+                <a
+                  class="text-sky-500 transition-colors duration-200 transform hover:text-sky-600 dark:hover:text-sky-300 hover:underline undefined"
+                  href="/domains/1/edit"
+                >
+                  編集
+                </a>
+              </td>
+            </tr>
+            <tr
+              class="bg-white dark:bg-gray-900"
+            >
+              <th
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                scope="row"
+              >
+                ✅
+              </th>
+              <td
+                class="px-6 py-4"
+              >
+                <a
+                  class="text-sky-500 transition-colors duration-200 transform hover:text-sky-600 dark:hover:text-sky-300 hover:underline undefined"
+                  href="/tasks/2"
+                >
+                  sample.dev
+                </a>
+              </td>
+              <td
+                class="px-6 py-4"
+              >
+                sample
+              </td>
+              <td
+                class="px-6 py-4"
+              >
+                2024/07/31
+              </td>
+              <td
+                class="px-6 py-4"
+              >
+                <a
+                  class="text-sky-500 transition-colors duration-200 transform hover:text-sky-600 dark:hover:text-sky-300 hover:underline undefined"
+                  href="/domains/2/edit"
+                >
+                  編集
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="relative overflow-x-auto shadow-md"
+    >
+      <table
+        class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border border-slate-300 dark:border-slate-600"
+      >
+        <thead
+          class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+        >
+          <tr>
+            <th
+              class="px-6 py-3"
+              scope="col"
+            />
+            <th
+              class="px-6 py-3"
+              scope="col"
+            >
+              タスク名
+            </th>
+            <th
+              class="px-6 py-3"
+              scope="col"
+            >
+              アカウント名
+            </th>
+            <th
+              class="px-6 py-3"
+              scope="col"
+            >
+              終了日時
+            </th>
+            <th
+              class="px-6 py-3"
+              scope="col"
+            />
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="bg-white dark:bg-gray-900"
+          >
+            <th
+              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              scope="row"
+            >
+              ✅
+            </th>
+            <td
+              class="px-6 py-4"
+            >
+              <a
+                class="text-sky-500 transition-colors duration-200 transform hover:text-sky-600 dark:hover:text-sky-300 hover:underline undefined"
+                href="/tasks/1"
+              >
+                sample.app
+              </a>
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              sample
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              2023/08/01
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              <a
+                class="text-sky-500 transition-colors duration-200 transform hover:text-sky-600 dark:hover:text-sky-300 hover:underline undefined"
+                href="/domains/1/edit"
+              >
+                編集
+              </a>
+            </td>
+          </tr>
+          <tr
+            class="bg-white dark:bg-gray-900"
+          >
+            <th
+              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              scope="row"
+            >
+              ✅
+            </th>
+            <td
+              class="px-6 py-4"
+            >
+              <a
+                class="text-sky-500 transition-colors duration-200 transform hover:text-sky-600 dark:hover:text-sky-300 hover:underline undefined"
+                href="/tasks/2"
+              >
+                sample.dev
+              </a>
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              sample
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              2024/07/31
+            </td>
+            <td
+              class="px-6 py-4"
+            >
+              <a
+                class="text-sky-500 transition-colors duration-200 transform hover:text-sky-600 dark:hover:text-sky-300 hover:underline undefined"
+                href="/domains/2/edit"
+              >
+                編集
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
