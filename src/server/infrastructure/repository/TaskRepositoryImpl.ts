@@ -39,7 +39,7 @@ export class TaskRepositoryImpl implements TaskRepository {
    */
   public async getTask({ id }: GetParams) {
     const user = await this.userRepository.findOrCreateUser();
-    const result = await this.client.getTask(id, user.token);
+    const result = await this.client.getDetail(id, user.token);
 
     if (!result.isSuccess) {
       return null;
