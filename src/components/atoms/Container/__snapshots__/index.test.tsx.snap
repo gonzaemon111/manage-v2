@@ -1,25 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`スナップショットテスト Renders Default story 1`] = `
+exports[`Atoms/Container コンポーネント スナップショットテスト Renders Default story 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <button
-        class="text-white bg-primary hover:bg-blue-500 opacity-95 hover:opacity-90 transition-all duration-200 transform focus:ring-4 focus:outline-none font-medium text-sm px-10 py-2.5 text-center shadow-md hover:shadow-xl inline-flex items-center gap-2 mr-2 mb-2"
-        type="button"
+      <div
+        class="p-8"
       >
-        新規作成
-      </button>
+        <div
+          class="p-8 bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-50 shadow"
+        >
+          <h1>
+            Header1
+          </h1>
+        </div>
+      </div>
     </div>
   </body>,
   "container": <div>
-    <button
-      class="text-white bg-primary hover:bg-blue-500 opacity-95 hover:opacity-90 transition-all duration-200 transform focus:ring-4 focus:outline-none font-medium text-sm px-10 py-2.5 text-center shadow-md hover:shadow-xl inline-flex items-center gap-2 mr-2 mb-2"
-      type="button"
+    <div
+      class="p-8"
     >
-      新規作成
-    </button>
+      <div
+        class="p-8 bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-50 shadow"
+      >
+        <h1>
+          Header1
+        </h1>
+      </div>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
