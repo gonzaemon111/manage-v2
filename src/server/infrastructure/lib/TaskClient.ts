@@ -24,12 +24,6 @@ interface GetTasksResponse {
   readonly tasks: Array<Task>;
 }
 
-interface ErrorResponse {
-  readonly code: number;
-  readonly message: string;
-  readonly messages: ReadonlyArray<string>;
-}
-
 @injectable()
 export class TaskClient {
   private readonly client: AxiosInstance;
