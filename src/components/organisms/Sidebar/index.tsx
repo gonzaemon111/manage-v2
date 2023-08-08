@@ -138,7 +138,7 @@ export function Sidebar({ sidebarOpen = true }: Props) {
                 />
               </svg>
 
-              <span className="mx-2 text-sm font-medium">設定</span>
+              <span className="mx-2 text-sm font-medium">個人設定</span>
             </Link>
           </div>
         </nav>
