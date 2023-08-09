@@ -9522,6 +9522,11 @@ react-element-to-jsx-string@^15.0.0:
     is-plain-object "5.0.0"
     react-is "18.1.0"
 
+react-hook-form@^7.45.4:
+  version "7.45.4"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.45.4.tgz#73d228b704026ae95d7e5f7b207a681b173ec62a"
+  integrity sha512-HGDV1JOOBPZj10LB3+OZgfDBTn+IeEsNOKiq/cxbQAIbKaiJUe/KV8DBUzsx0Gx/7IG/orWqRRm736JwOfUSWQ==
+
 react-inspector@^6.0.0:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/react-inspector/-/react-inspector-6.0.2.tgz#aa3028803550cb6dbd7344816d5c80bf39d07e9d"
@@ -11088,6 +11093,11 @@ v8-to-istanbul@^9.0.0, v8-to-istanbul@^9.0.1:
     "@jridgewell/trace-mapping" "^0.3.12"
     "@types/istanbul-lib-coverage" "^2.0.1"
     convert-source-map "^1.6.0"
+
+valibot@^0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/valibot/-/valibot-0.11.1.tgz#f4d301ddf791d87d51cdf31ec04408b5f12e6dc8"
+  integrity sha512-35v3J5FFHuxr/erQKASwy1VmbI9bc/GJzBd1QZWccXr3lh0xq6a/nzQfI49xBjJeHrAyFfbopr7ZT2TwkMFuPw==
 
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
