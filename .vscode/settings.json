@@ -27,7 +27,8 @@
     "headlessui",
     "heroicons",
     "nextjs",
-    "axios"
+    "axios",
+    "valibot"
   ],
   "scss.lint.unknownAtRules": "ignore",
   "css.lint.unknownAtRules": "ignore",
