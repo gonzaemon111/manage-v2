@@ -7,7 +7,6 @@ describe("Organisms/Header コンポーネント", () => {
     const { Default } = composeStories(Stories);
     const { getByText, container } = render(<Default />);
     expect(getByText("Manage")).toBeTruthy();
-    expect(container.getElementsByClassName("Manage")).toBeTruthy();
   });
 
   describe("スナップショットテスト", () => {
