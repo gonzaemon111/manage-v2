@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Organisms/Task/Form コンポーネント スナップショットテスト Renders Default story 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="p-8 bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-50 shadow"
+      >
+        <form
+          class="flex flex-col space-y-4 "
+        >
+          <div
+            class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center justify-center undefined"
+          >
+            <label
+              class="text-left md:text-right undefined"
+              for="name"
+            >
+              タスク名
+            </label>
+            <div
+              class="col-span-4"
+            >
+              <input
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-none focus:ring-offset-0 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 undefined"
+                id="name"
+                name="name"
+              />
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center justify-center undefined"
+          >
+            <label
+              class="text-left md:text-right undefined"
+              for="finishedAt"
+            >
+              終了日時
+            </label>
+            <div
+              class="col-span-4"
+            >
+              <input
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-none focus:ring-offset-0 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 undefined"
+                id="finishedAt"
+                name="finishedAt"
+                type="datetime-local"
+              />
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center justify-center undefined"
+          >
+            <label
+              class="text-left md:text-right undefined"
+              for="deadline"
+            >
+              締切
+            </label>
+            <div
+              class="col-span-4"
+            >
+              <input
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-none focus:ring-offset-0 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 undefined"
+                id="deadline"
+                name="deadline"
+                type="datetime-local"
+              />
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center justify-center undefined"
+          >
+            <label
+              class="text-left md:text-right undefined"
+              for="memo"
+            >
+              メモ
+            </label>
+            <textarea
+              class="col-span-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-none focus:ring-offset-0 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 undefined"
+              id="memo"
+              name="memo"
+            />
+          </div>
+          <div
+            class="flex justify-center items-center m-8 mb-0"
+          >
+            <button
+              class="text-white bg-primary hover:bg-blue-500 opacity-95 hover:opacity-90 transition-all duration-200 transform focus:ring-4 focus:outline-none font-medium text-sm px-10 py-2.5 text-center shadow-md hover:shadow-xl inline-flex items-center gap-2 mr-2 mb-2"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              送信
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="p-8 bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-50 shadow"
+    >
+      <form
+        class="flex flex-col space-y-4 "
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center justify-center undefined"
+        >
+          <label
+            class="text-left md:text-right undefined"
+            for="name"
+          >
+            タスク名
+          </label>
+          <div
+            class="col-span-4"
+          >
+            <input
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-none focus:ring-offset-0 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 undefined"
+              id="name"
+              name="name"
+            />
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center justify-center undefined"
+        >
+          <label
+            class="text-left md:text-right undefined"
+            for="finishedAt"
+          >
+            終了日時
+          </label>
+          <div
+            class="col-span-4"
+          >
+            <input
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-none focus:ring-offset-0 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 undefined"
+              id="finishedAt"
+              name="finishedAt"
+              type="datetime-local"
+            />
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center justify-center undefined"
+        >
+          <label
+            class="text-left md:text-right undefined"
+            for="deadline"
+          >
+            締切
+          </label>
+          <div
+            class="col-span-4"
+          >
+            <input
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-none focus:ring-offset-0 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 undefined"
+              id="deadline"
+              name="deadline"
+              type="datetime-local"
+            />
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center justify-center undefined"
+        >
+          <label
+            class="text-left md:text-right undefined"
+            for="memo"
+          >
+            メモ
+          </label>
+          <textarea
+            class="col-span-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-none focus:ring-offset-0 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 undefined"
+            id="memo"
+            name="memo"
+          />
+        </div>
+        <div
+          class="flex justify-center items-center m-8 mb-0"
+        >
+          <button
+            class="text-white bg-primary hover:bg-blue-500 opacity-95 hover:opacity-90 transition-all duration-200 transform focus:ring-4 focus:outline-none font-medium text-sm px-10 py-2.5 text-center shadow-md hover:shadow-xl inline-flex items-center gap-2 mr-2 mb-2"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="h-4 w-4"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            送信
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
