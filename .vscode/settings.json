@@ -28,7 +28,9 @@
     "heroicons",
     "nextjs",
     "axios",
-    "valibot"
+    "valibot",
+    "hookform",
+    "textinput"
   ],
   "scss.lint.unknownAtRules": "ignore",
   "css.lint.unknownAtRules": "ignore",
