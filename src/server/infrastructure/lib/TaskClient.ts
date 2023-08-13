@@ -1,7 +1,8 @@
 import "reflect-metadata";
 import { Failure, Success } from "@/server/shared/Result";
-import axios, { AxiosError, AxiosInstance } from "axios";
+import axios, { AxiosInstance } from "axios";
 import { injectable } from "inversify";
+import { ErrorResponse } from "@/server/domain/Error";
 
 interface Task {
   readonly id: number;
@@ -45,24 +46,10 @@ export class TaskClient {
 
       return new Success(response.data);
     } catch (error) {
-      if (axios.isAxiosError(error)) {
-        return new Failure({
-          status: error.response?.status,
-          data: error.response?.data,
-          message: error.message,
-        });
-      }
-      return new Failure({
-        status: 500,
-        data: "予期せぬエラーが発生しました",
-        message: "予期せぬエラーが発生しました",
-      });
+      return this.errorResponse(error);
     }
   }
 
-  /**
-   * getDetail
-   */
   public async getDetail(id: number, token: string) {
     try {
       const response = await this.client.get<Task>(`/${id}`, {
@@ -71,18 +58,7 @@ export class TaskClient {
 
       return new Success(response.data);
     } catch (error) {
-      if (axios.isAxiosError(error)) {
-        return new Failure({
-          status: error.response?.status,
-          data: error.response?.data,
-          message: error.message,
-        });
-      }
-      return new Failure({
-        status: 500,
-        data: "予期せぬエラーが発生しました",
-        message: "予期せぬエラーが発生しました",
-      });
+      return this.errorResponse(error);
     }
   }
 
@@ -100,18 +76,7 @@ export class TaskClient {
 
       return new Success(response.data);
     } catch (error) {
-      if (axios.isAxiosError(error)) {
-        return new Failure({
-          status: error.response?.status,
-          data: error.response?.data,
-          message: error.message,
-        });
-      }
-      return new Failure({
-        status: 500,
-        data: "予期せぬエラーが発生しました",
-        message: "予期せぬエラーが発生しました",
-      });
+      return this.errorResponse(error);
     }
   }
 
@@ -129,18 +94,7 @@ export class TaskClient {
 
       return new Success(response.data);
     } catch (error) {
-      if (axios.isAxiosError(error)) {
-        return new Failure({
-          status: error.response?.status,
-          data: error.response?.data,
-          message: error.message,
-        });
-      }
-      return new Failure({
-        status: 500,
-        data: "予期せぬエラーが発生しました",
-        message: "予期せぬエラーが発生しました",
-      });
+      return this.errorResponse(error);
     }
   }
 
@@ -154,18 +108,22 @@ export class TaskClient {
 
       return new Success(response.data);
     } catch (error) {
-      if (axios.isAxiosError(error)) {
-        return new Failure({
-          status: error.response?.status,
-          data: error.response?.data,
-          message: error.message,
-        });
-      }
+      return this.errorResponse(error);
+    }
+  }
+
+  private errorResponse(error: any): Failure<ErrorResponse> {
+    if (axios.isAxiosError(error)) {
       return new Failure({
-        status: 500,
-        data: "予期せぬエラーが発生しました",
-        message: "予期せぬエラーが発生しました",
+        status: error.response?.status,
+        data: error.response?.data,
+        message: error.message,
       });
     }
+    return new Failure({
+      status: 500,
+      data: "予期せぬエラーが発生しました",
+      message: "予期せぬエラーが発生しました",
+    });
   }
 }
