@@ -17,6 +17,7 @@ module.exports = {
     // 'storybook-addon-next',
     "@storybook/addon-mdx-gfm",
     "@storybook/addon-jest",
+    "storybook-addon-next-router",
   ],
   staticDirs: ["../public"],
   framework: {
