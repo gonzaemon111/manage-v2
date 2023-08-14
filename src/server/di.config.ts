@@ -10,8 +10,10 @@ import {
   TaskControllerImpl,
 } from "./di.interface";
 import { TYPES } from "./di.types";
-import { UserRepositoryImpl } from "./infrastructure/repository/UserRepositoryImpl";
-import { TaskRepositoryImpl } from "./infrastructure/repository/TaskRepositoryImpl";
+import {
+  TaskRepositoryImpl,
+  UserRepositoryImpl,
+} from "./infrastructure/repository";
 
 /**
  * DIコンテナを作成
