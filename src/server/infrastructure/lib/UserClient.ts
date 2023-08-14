@@ -1,6 +1,6 @@
-import { Failure, Result, Success } from "@/server/shared/Result";
 import axios, { AxiosInstance } from "axios";
 import { injectable } from "inversify";
+import { Failure, Success } from "@/server/shared/Result";
 
 interface FindOrCreateUserParams {
   readonly email?: string | null;

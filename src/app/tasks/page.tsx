@@ -1,14 +1,14 @@
-import { TaskListPage } from "@/components/pages/TaskPage";
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "../api/auth/[...nextauth]/authOption";
+import { TaskListPage } from "@/components/pages/TaskPage";
 import { container } from "@/server/di.config";
-import { TYPES } from "@/server/di.types";
 import { Task, TaskController } from "@/server/di.interface";
+import { TYPES } from "@/server/di.types";
+import { authOptions } from "../api/auth/[...nextauth]/authOption";
 
 const controller = container.get<TaskController>(TYPES.TaskController);
 
 async function fetchTasks(): Promise<{ tasks: ReadonlyArray<Task> }> {
-  return await controller.getList();
+  return await controller.get();
 }
 
 export const metadata = {
