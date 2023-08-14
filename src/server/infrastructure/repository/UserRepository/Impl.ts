@@ -1,7 +1,7 @@
 import { TYPES } from "@/server/di.types";
 import { UserRepository } from "@/server/domain/User";
 import { inject, injectable } from "inversify";
-import { UserClient } from "../lib";
+import { UserClient } from "../../lib";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/authOption";
 
