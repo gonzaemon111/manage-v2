@@ -2,9 +2,13 @@ import { composeStories } from "@storybook/react";
 import { render } from "@testing-library/react";
 import * as Stories from "./index.stories";
 
+jest.mock("next/navigation", () => ({
+  useRouter: jest.fn(),
+}));
+
 describe("Organisms/Task/Form コンポーネント", () => {
-  describe("Openな時", () => {
-    test("適切なclassNameが適用されている", () => {
+  describe("正常な時", () => {
+    test("適切な文字列が表示されている", () => {
       const { Default } = composeStories(Stories);
       const { getByText } = render(<Default />);
       expect(getByText("タスク名")).toBeTruthy();
