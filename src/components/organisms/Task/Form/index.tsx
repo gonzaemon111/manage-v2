@@ -1,21 +1,24 @@
 "use client";
-import { Panel } from "@/components/atoms/Panel";
+import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
+import { valibotResolver } from "@hookform/resolvers/valibot";
+import { useRouter } from "next/navigation";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { TaskSchema, TaskSchemaType } from "./Schema";
 import { Button } from "@/components/atoms/Button";
+import { Panel } from "@/components/atoms/Panel";
 import { Form } from "@/components/molecules/Form";
 import { FormItem } from "@/components/molecules/Form/item";
 import { FormLabel } from "@/components/molecules/Form/label";
-import { FormTextInput } from "@/components/molecules/Form/textinput";
 import { FormTextArea } from "@/components/molecules/Form/textarea";
-import { valibotResolver } from "@hookform/resolvers/valibot";
-import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
+import { FormTextInput } from "@/components/molecules/Form/textinput";
+import { TaskSchema, TaskSchemaType } from "./Schema";
 
 export function TaskForm() {
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isDirty },
     getValues,
   } = useForm<TaskSchemaType>({
     mode: "all",
@@ -25,11 +28,31 @@ export function TaskForm() {
       memo: "",
     },
   });
-  const onSubmit: SubmitHandler<TaskSchemaType> = (data) => console.log(data);
+  const submitAction = async () => {
+    const data = getValues();
+    const task = await fetch("/api/tasks", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (task) {
+      router.push("/tasks");
+    }
+  };
+
+  const onSubmit: SubmitHandler<TaskSchemaType> = async (data) => {
+    await submitAction();
+  };
+  const onClick = async () => {
+    await submitAction();
+  };
 
   return (
     <Panel>
-      <Form onSubmit={handleSubmit(onSubmit)} className="">
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <FormItem>
           <FormLabel htmlFor="name">タスク名</FormLabel>
           <FormTextInput
@@ -61,10 +84,12 @@ export function TaskForm() {
 
         <div className="flex justify-center items-center m-8 mb-0">
           <Button
+            type="submit"
             name="送信"
-            onClick={() => {
-              console.log(getValues());
+            onClick={async () => {
+              await onClick();
             }}
+            disabled={!isDirty}
             icon={<PaperAirplaneIcon className="h-4 w-4" />}
           />
         </div>
