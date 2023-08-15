@@ -30,7 +30,9 @@
     "axios",
     "valibot",
     "hookform",
-    "textinput"
+    "textinput",
+    "nextauth",
+    "autoprefixer"
   ],
   "scss.lint.unknownAtRules": "ignore",
   "css.lint.unknownAtRules": "ignore",
