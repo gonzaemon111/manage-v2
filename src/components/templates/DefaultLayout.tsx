@@ -1,8 +1,8 @@
 "use client";
+import { useSession } from "next-auth/react";
 import { ReactNode, useState } from "react";
 import { Header } from "../organisms/Header";
 import { Sidebar } from "../organisms/Sidebar";
-import { useSession } from "next-auth/react";
 
 interface Props {
   children: ReactNode;

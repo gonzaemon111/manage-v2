@@ -1,7 +1,7 @@
 "use client";
 import "./globals.css";
-import { DefaultLayout } from "@/components/templates/DefaultLayout";
 import { SessionProvider } from "next-auth/react";
+import { DefaultLayout } from "@/components/templates/DefaultLayout";
 
 export default function RootLayout({
   children,
