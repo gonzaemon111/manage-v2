@@ -39,7 +39,9 @@ export function TaskTable({ tasks }: Props) {
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
               >
-                {task.finishedAt !== undefined ? "✅" : null}
+                {task.finishedAt !== undefined || task.finishedAt !== ""
+                  ? "✅"
+                  : null}
               </Th>
               <Td>
                 <Link href={`/tasks/${task.id}`}>{task.name}</Link>

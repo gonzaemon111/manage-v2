@@ -1,6 +1,6 @@
+import { DefaultLayout } from "./DefaultLayout";
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { DefaultLayout } from "./DefaultLayout";
 
 const meta = {
   title: "DefaultLayout",

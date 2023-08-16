@@ -1,8 +1,8 @@
+import { CreateParams } from "@/server/domain/Task";
 import { Success } from "@/server/shared/Result";
 import { TaskClient } from "../../lib";
-import { TaskRepositoryImpl } from "./Impl";
 import { mockUserRepository } from "../UserRepository/mock";
-import { CreateParams } from "@/server/domain/Task";
+import { TaskRepositoryImpl } from "./Impl";
 
 const task = {
   id: 1,

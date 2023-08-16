@@ -1,6 +1,6 @@
+import { DomainsTable } from ".";
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { DomainsTable } from ".";
 
 const meta = {
   title: "Organisms/Domain/Table",

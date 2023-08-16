@@ -1,8 +1,8 @@
 import "reflect-metadata";
-import { Failure, Success } from "@/server/shared/Result";
 import axios, { AxiosInstance } from "axios";
 import { injectable } from "inversify";
 import { ErrorResponse } from "@/server/domain/Error";
+import { Failure, Success } from "@/server/shared/Result";
 
 interface Task {
   readonly id: number;

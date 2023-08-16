@@ -1,8 +1,8 @@
-import React, { ComponentPropsWithoutRef } from "react";
+import { forwardRef, ComponentPropsWithoutRef } from "react";
 
 type Props = ComponentPropsWithoutRef<"textarea">;
 
-export const FormTextArea = React.forwardRef<HTMLTextAreaElement, Props>(
+export const FormTextArea = forwardRef<HTMLTextAreaElement, Props>(
   ({ className, ...props }, ref) => (
     <textarea
       ref={ref}

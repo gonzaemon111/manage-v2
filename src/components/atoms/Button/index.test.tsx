@@ -1,7 +1,7 @@
 import { composeStories } from "@storybook/react";
-import { Button, LinkButton } from ".";
 import { render } from "@testing-library/react";
 import * as stories from "./index.stories";
+import { Button, LinkButton } from ".";
 
 describe("スナップショットテスト", () => {
   const testCases = Object.values(composeStories(stories)).map((Story) => [
