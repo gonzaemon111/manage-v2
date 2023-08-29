@@ -1,6 +1,6 @@
 import { getServerSession } from "next-auth/next";
 import { DomainListPage } from "@/components/pages/DomainPage";
-import { authOptions } from "../api/auth/[...nextauth]/authOption";
+import { authOptions } from "../../api/auth/[...nextauth]/authOption";
 
 type Domain = {
   readonly id: number;
