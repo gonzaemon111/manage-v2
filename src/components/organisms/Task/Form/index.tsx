@@ -18,7 +18,7 @@ export function TaskForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isDirty },
+    formState: { errors, isDirty, isValid },
     getValues,
   } = useForm<TaskSchemaType>({
     mode: "all",
@@ -89,7 +89,7 @@ export function TaskForm() {
             onClick={async () => {
               await onClick();
             }}
-            disabled={!isDirty}
+            disabled={!isDirty || !isValid}
             icon={<PaperAirplaneIcon className="h-4 w-4" />}
           />
         </div>
