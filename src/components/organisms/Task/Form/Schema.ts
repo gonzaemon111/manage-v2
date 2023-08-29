@@ -5,8 +5,6 @@ import {
   minLength,
   object,
   string,
-  date,
-  DateSchema,
 } from "valibot";
 
 const nameSchema: StringSchema<string> = string([
@@ -18,8 +16,8 @@ const memoSchema: StringSchema<string> = string([
   maxLength(65535, "入力可能な文字数は65535文字です"),
 ]);
 
-const deadlineSchema: DateSchema<Date> = date([]);
-const finishedAtSchema: DateSchema<Date> = date([]);
+const deadlineSchema: StringSchema<string> = string();
+const finishedAtSchema: StringSchema<string> = string();
 
 export const TaskSchema = object({
   name: nameSchema,
