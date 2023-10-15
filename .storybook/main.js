@@ -24,12 +24,17 @@ module.exports = {
     name: "@storybook/nextjs",
     options: {},
   },
-  // PathAliasの設定
-  // webpackFinal(config) {
-  //   config.resolve.modules = [...(config.resolve.modules || []), path.resolve(__dirname, '../src')];
-  //   config.resolve.plugins = [...(config.resolve.plugins || []), new TsconfigPathsPlugin()];
-  //   return config;
-  // },
+  webpack(config, options) {
+    if (config.resolve === undefined) {
+      return config;
+    }
+
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@": path.resolve(__dirname, "../src"),
+    };
+    return config;
+  },
   docs: {
     autodocs: true,
   },
