@@ -17,14 +17,16 @@ export function TaskListPage({ tasks }: Props) {
       </Panel>
       <Container>
         <Panel>
-          <div className="text-right">
-            <LinkButton
-              href="/tasks/new"
-              name="新規作成"
-              icon={<PlusIcon className="h-4 w-4" />}
-            />
+          <div className="flex flex-col gap-4 md:gap-8">
+            <div className="text-right">
+              <LinkButton
+                href="/tasks/new"
+                name="新規作成"
+                icon={<PlusIcon className="h-4 w-4" />}
+              />
+            </div>
+            <TaskTable tasks={tasks} />
           </div>
-          <TaskTable tasks={tasks} />
         </Panel>
       </Container>
     </>
