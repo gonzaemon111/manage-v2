@@ -49,3 +49,9 @@ jobs:
 
       - name: Check Test
         run: bun run test:ci
+
+      # - name: Prisma Generate # これをしないとBuildが実行できない
+      #   run: bun run prisma generate
+
+      - name: Check Build
+        run: bun run build
