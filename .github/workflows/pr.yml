@@ -11,6 +11,10 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # 使用するNode.jsのバージョンを定義
+        node-version: [18.x]
     env:
       GITHUB_TOKEN: ${{ secrets.TOKEN }}
       DATABASE_URL: mysql://root:root@localhost:3306/manage
@@ -38,23 +42,30 @@ jobs:
           timezoneLinux: "Asia/Tokyo"
           timezoneMacos: "Asia/Tokyo"
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        # Node.jsのセットアップに必要な設定
+        uses: actions/setup-node@v3
+        with:
+          # Node.jsのバージョンを指定
+          node-version: ${{ matrix.node-version }}
+          # yarnのキャッシュを使用する設定
+          cache: "yarn"
 
       - name: Install dependencies
-        run: bun install
+        # プロジェクトの依存関係をインストール
+        run: yarn install --frozen-lockfile
 
       - name: Prisma Generate # これをしないとBuildが実行できない
-        run: bun run prisma generate
+        run: yarn prisma generate
 
       - name: Check Lint
-        run: bun run lint
+        run: yarn lint
 
       - name: Check Test
-        run: bun run test:ci
+        run: yarn test:ci
 
       - name: Check Build
-        run: bun run build
+        run: yarn build
         env:
           NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
           NEXTAUTH_GITHUB_CLIENT_ID: ${{ secrets.NEXTAUTH_GITHUB_CLIENT_ID }}
