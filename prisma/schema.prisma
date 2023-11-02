@@ -50,6 +50,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  Domain        Domain[]
 }
 
 model VerificationToken {
@@ -58,4 +59,18 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+model Domain {
+  id            Int     @id @default(autoincrement())
+  user          User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId        String  @map("user_id")
+  name          String
+  isCanceled    Boolean @default(false)
+  memo          String? @db.LongText()
+  nextUpdatedAt String?
+  provider      String
+  accountName   String
+
+  @@index([userId])
 }

@@ -8,3 +8,11 @@ export interface Domain {
   readonly provider: string;
   readonly accountName: string;
 }
+
+export interface GetParams {
+  readonly userId: string;
+}
+
+export interface DomainRepository {
+  get(params: GetParams): ReadonlyArray<Readonly<Domain>>;
+}
