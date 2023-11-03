@@ -3,8 +3,6 @@ export const TYPES = {
   UserClient: Symbol("UserClient"),
   TaskClient: Symbol("TaskClient"),
   // Repository
-  UserRepository: Symbol("UserRepository"),
-  TaskRepository: Symbol("TaskRepository"),
 
   // Service
   TaskService: Symbol("TaskService"),

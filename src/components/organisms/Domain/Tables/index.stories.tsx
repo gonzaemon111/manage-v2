@@ -1,7 +1,6 @@
 import { DomainsTable } from ".";
 import type { Meta, StoryObj } from "@storybook/react";
 
-
 const meta = {
   title: "Organisms/Domain/Table",
   component: DomainsTable,
@@ -12,7 +11,7 @@ export default meta;
 const domains = [
   {
     id: 1,
-    userId: 1,
+    userId: "user1",
     name: "sample.app",
     isCanceled: false,
     memo: "メモ",
@@ -22,7 +21,7 @@ const domains = [
   },
   {
     id: 2,
-    userId: 1,
+    userId: "user1",
     name: "sample.dev",
     isCanceled: false,
     memo: "メモ",
