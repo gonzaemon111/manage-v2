@@ -1,15 +1,5 @@
 import { Link } from "@/components/atoms/Link";
-
-interface Domain {
-  readonly id: number;
-  readonly userId: number;
-  readonly name: string;
-  readonly isCanceled: boolean;
-  readonly memo: string;
-  readonly nextUpdatedAt: string;
-  readonly provider: string;
-  readonly accountName: string;
-}
+import { Domain } from "@/server/domain/Domain";
 
 interface Props {
   readonly domains: ReadonlyArray<Domain>;
