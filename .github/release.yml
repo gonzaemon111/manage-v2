@@ -46,6 +46,9 @@ changelog:
     - title: ⚡️ リファクタリング
       labels:
         - ⚡️ リファクタリング
+    - title: ✨ 機能追加
+      labels:
+        - ✨ 機能追加
     - title: 🎉 新機能
       labels:
         - "*"
