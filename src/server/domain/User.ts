@@ -1,10 +1,17 @@
+import { Result } from '../shared/Result';
+
 export interface User {
-  readonly name?: string;
-  readonly email?: string;
-  readonly picture?: string;
-  readonly token: string;
+  readonly id: string;
+  readonly name: string;
+  readonly email: string;
+  readonly image?: string;
+  readonly accessToken: string;
+}
+
+export interface FindParams {
+  readonly userId: string;
 }
 
 export interface UserRepository {
-  findOrCreateUser(): Promise<Readonly<User>>;
+  find(params: FindParams): Promise<Readonly<Result<Readonly<User>, Error>>>;
 }
