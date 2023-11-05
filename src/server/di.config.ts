@@ -1,11 +1,14 @@
-import { BindingScopeEnum, Container } from "inversify";
+import { BindingScopeEnum, Container } from 'inversify';
+import { UserRepository, DomainRepository } from './di.interface';
+import { TYPES } from './di.types';
+import { UserRepositoryImpl, DomainRepositoryImpl } from './infrastructure/repository';
 
 /**
  * DIコンテナを作成
  */
 const container = new Container({
   autoBindInjectable: true,
-  defaultScope: BindingScopeEnum.Singleton,
+  defaultScope: BindingScopeEnum.Singleton
 });
 
 /**
@@ -15,6 +18,8 @@ const container = new Container({
 /**
  * Repository
  */
+container.bind<UserRepository>(TYPES.UserRepository).to(UserRepositoryImpl);
+container.bind<DomainRepository>(TYPES.DomainRepository).to(DomainRepositoryImpl);
 
 /**
  * Service

@@ -1,7 +1,7 @@
-// export { TaskClient, UserClient } from "@/server/infrastructure/lib";
-export * from "@/server/domain/Domain";
-export * from "@/server/domain/User";
-export * from "@/server/domain/Task";
+export { type DomainRepository } from '@/server/domain/Domain';
+export { type UserRepository } from '@/server/domain/User';
+export * from '@/server/domain/Task';
+
 // Service
 
 // Controller
