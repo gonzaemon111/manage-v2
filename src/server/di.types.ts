@@ -5,6 +5,7 @@ export const TYPES = {
 
   // Service
   TaskService: Symbol('TaskService'),
+  DomainService: Symbol('DomainService'),
 
   // Controller
   TaskController: Symbol('TaskController')
