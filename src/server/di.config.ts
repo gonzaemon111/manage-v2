@@ -1,5 +1,5 @@
 import { BindingScopeEnum, Container } from 'inversify';
-import { UserRepository, DomainRepository, DomainService } from './di.interface';
+import { UserRepository, DomainRepository, DomainService, DomainController } from './di.interface';
 import { TYPES } from './di.types';
 import { UserRepositoryImpl, DomainRepositoryImpl } from './infrastructure/repository';
 
@@ -29,5 +29,6 @@ container.bind<DomainService>(TYPES.DomainService).to(DomainService);
 /**
  * Controller
  */
+container.bind<DomainController>(TYPES.DomainController).to(DomainController);
 
 export { container };

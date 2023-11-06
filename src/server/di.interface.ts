@@ -6,3 +6,4 @@ export * from '@/server/domain/Task';
 export * from '@/server/application/service';
 
 // Controller
+export * from '@/server/interface/controller';
