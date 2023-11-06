@@ -8,5 +8,6 @@ export const TYPES = {
   DomainService: Symbol('DomainService'),
 
   // Controller
-  TaskController: Symbol('TaskController')
+  TaskController: Symbol('TaskController'),
+  DomainController: Symbol('DomainController')
 };
