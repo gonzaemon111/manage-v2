@@ -43,14 +43,15 @@ model Session {
 }
 
 model User {
-  id            String    @id @default(cuid())
-  name          String
-  email         String    @unique
-  emailVerified DateTime?
-  image         String?
-  accounts      Account[]
-  sessions      Session[]
-  Domain        Domain[]
+  id            String         @id @default(cuid()) // ユーザーID
+  name          String // ユーザー名
+  email         String         @unique // メールアドレス
+  emailVerified DateTime? // メール検証
+  image         String? // 画像
+  accounts      Account[] // アカウント
+  sessions      Session[] // セッション
+  Domain        Domain[] // ドメイン
+  Subscription  Subscription[] // サブスク
 }
 
 model VerificationToken {
@@ -71,6 +72,22 @@ model Domain {
   nextUpdatedAt String?
   provider      String
   accountName   String
+
+  @@index([userId])
+}
+
+model Subscription {
+  id         Int       @id @default(autoincrement())
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId     String    @map("user_id")
+  name       String
+  memo       String?   @db.LongText()
+  startedAt  DateTime?
+  finishedAt DateTime?
+  imageURL   String?
+  price      Int
+  createdAt  DateTime  @default(now()) @map("created_at")
+  updatedAt  DateTime  @updatedAt @map("updated_at")
 
   @@index([userId])
 }
