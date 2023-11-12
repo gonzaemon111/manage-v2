@@ -1,7 +1,13 @@
 import { BindingScopeEnum, Container } from 'inversify';
-import { UserRepository, DomainRepository, DomainService, DomainController } from './di.interface';
+import {
+  UserRepository,
+  DomainRepository,
+  SubscriptionRepository,
+  DomainService,
+  DomainController
+} from './di.interface';
 import { TYPES } from './di.types';
-import { UserRepositoryImpl, DomainRepositoryImpl } from './infrastructure/repository';
+import { UserRepositoryImpl, DomainRepositoryImpl, SubscriptionRepositoryImpl } from './infrastructure/repository';
 
 /**
  * DIコンテナを作成
@@ -20,6 +26,7 @@ const container = new Container({
  */
 container.bind<UserRepository>(TYPES.UserRepository).to(UserRepositoryImpl);
 container.bind<DomainRepository>(TYPES.DomainRepository).to(DomainRepositoryImpl);
+container.bind<SubscriptionRepository>(TYPES.SubscriptionRepository).to(SubscriptionRepositoryImpl);
 
 /**
  * Service

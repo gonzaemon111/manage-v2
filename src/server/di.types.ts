@@ -2,6 +2,7 @@ export const TYPES = {
   // Repository
   UserRepository: Symbol('UserRepository'),
   DomainRepository: Symbol('DomainRepository'),
+  SubscriptionRepository: Symbol('SubscriptionRepository'),
 
   // Service
   TaskService: Symbol('TaskService'),
