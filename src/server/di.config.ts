@@ -4,7 +4,9 @@ import {
   DomainRepository,
   SubscriptionRepository,
   DomainService,
-  DomainController
+  DomainController,
+  SubscriptionService,
+  SubscriptionController
 } from './di.interface';
 import { TYPES } from './di.types';
 import { UserRepositoryImpl, DomainRepositoryImpl, SubscriptionRepositoryImpl } from './infrastructure/repository';
@@ -32,10 +34,12 @@ container.bind<SubscriptionRepository>(TYPES.SubscriptionRepository).to(Subscrip
  * Service
  */
 container.bind<DomainService>(TYPES.DomainService).to(DomainService);
+container.bind<SubscriptionService>(TYPES.SubscriptionService).to(SubscriptionService);
 
 /**
  * Controller
  */
 container.bind<DomainController>(TYPES.DomainController).to(DomainController);
+container.bind<SubscriptionController>(TYPES.SubscriptionController).to(SubscriptionController);
 
 export { container };
