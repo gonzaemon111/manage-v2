@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { injectable } from 'inversify';
 import { InternalServerError } from '@/server/domain/Errors/InternalServerError';
 import { NotFoundError } from '@/server/domain/Errors/NotFoundError';
